@@ -35,11 +35,14 @@ const AppProvider = ({ children }) => {
   };
 
   const selectMeal = (idMeal, favoriteMeal) => {
-    console.log("hello");
     let meal;
     meal = meals.find((meal) => meal.idMeal === idMeal);
     setSelectedMeal(meal);
     setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   useEffect(() => {
@@ -62,6 +65,7 @@ const AppProvider = ({ children }) => {
         showModal,
         selectedMeal,
         selectMeal,
+        closeModal,
       }}
     >
       {children}
