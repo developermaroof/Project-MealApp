@@ -81,6 +81,7 @@ const AppProvider = ({ children }) => {
         closeModal,
         addToFavorites,
         removeFromFavorites,
+        favorites,
       }}
     >
       {children}

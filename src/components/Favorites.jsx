@@ -1,5 +1,13 @@
+import { useGlobalContext } from "../context";
+
 const Favorites = () => {
-  return <h1>Favorites Component</h1>;
+  const { favorites, selectMeal, removeFromFavorites } = useGlobalContext();
+
+  return (
+    <section className="favorites">
+      <div className=""></div>
+    </section>
+  );
 };
 
 export default Favorites;
